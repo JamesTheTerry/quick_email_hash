@@ -1,0 +1,23 @@
+{
+  "name": "quick_email_hash",
+  "version": "1.0.0",
+  "description": "Quickly hash emails",
+  "main": "hasher.js",
+  "scripts": {
+    "start": "node hasher.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesTheTerry/quick_email_hash.git"
+  },
+  "author": "James Terry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesTheTerry/quick_email_hash/issues"
+  },
+  "homepage": "https://github.com/JamesTheTerry/quick_email_hash#readme",
+  "dependencies": {
+    "papaparse": "^5.1.0"
+  }
+}
