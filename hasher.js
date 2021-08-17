@@ -12,15 +12,27 @@ const createHash = (value_to_hash) => {
   }
 }
 
-const main = (inputFilepath, outputFilepath) => {
+const main = ({ inputFilepath, outputFilepath }) => {
   const inputData = fs.readFileSync(inputFilepath, 'utf8');
   const parsedData = Papa.parse(inputData, { header: true, skipEmptyLines: true }).data
   const hashedEmails = parsedData.map(row => {
-    return { hashed_email: createHash(row['Email Address']) };
+    return {
+      ...row, // this makes sure all the existing columns are in the output
+
+      // use the format to below to add new hashed columns
+        // hashed_email will be the new column name
+        // 'Email Address' is the column header (row 1) to grab from
+      hashed_email: createHash(row['Email Address']),
+    };
   });
   const csvOutputString = Papa.unparse(hashedEmails);
   fs.writeFileSync(outputFilepath, csvOutputString);
   console.log('done')
 }
 
-main('./samples/input.csv', './samples/output.csv');
+
+// edit the inputFilepath and outputFilepath as you see fit
+main({
+  inputFilepath: './samples/input.csv',
+  outputFilepath: './samples/output.csv'
+});
