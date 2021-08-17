@@ -4,7 +4,7 @@ Hash those emails! Now featuring SHA-256!
 ## Setup
 
 1. Clone down this repo
-2. Have [Node 10.x.x](https://nodejs.org/en/) installed on your local machine, as well as NPM. [Node Version Manager](https://github.com/nvm-sh/nvm) is my favorite way of installing Node.
+2. Have [Node 14.x.x](https://nodejs.org/en/) installed on your local machine, as well as NPM. [Node Version Manager](https://github.com/nvm-sh/nvm) is my favorite way of installing Node.
 3. Run `npm install`
 
 ## Run
